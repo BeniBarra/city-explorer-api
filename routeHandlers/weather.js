@@ -44,10 +44,9 @@ let getWeather = async (latitude, longitude) => {
     console.log('Cache miss');
     cache[key] = {};
     cache[key].timestamp = Date.now();
-    await axios.get(url)
-      .then(response => {
-        cache[key].data = parseWeather(response);
-      });
+    await axios.get(url).then(response => {
+      cache[key].data = parseWeather(response);
+    });
   }
 
   return cache[key].data;
