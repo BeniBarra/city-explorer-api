@@ -15,10 +15,7 @@ Gather API keys for the data you wish to display on the front end. This backend 
 Node.js, express, axios, coded with JavaScript on VS Code.
 
 ## Change Log
-- Front end Developed 
--
--
--
+- Back-end Developed 
 
 ## Credit and Collaborations
 - Huge thanks to Miriam Silve and Steven Boston for picking on my silly mistakes whenI couldn't see them.
@@ -26,4 +23,5 @@ Node.js, express, axios, coded with JavaScript on VS Code.
 - Thanks to AJ and Alex Vogt for prinicpal design brainstroming!
 
 ### Deployed Front-end, to deployed back-end, to external API's WRRC
+
 ![WRRC](https://i.imgur.com/x0tiPyG.png)

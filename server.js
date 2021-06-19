@@ -18,8 +18,20 @@ app.get('/', (req, res) => {
   res.send('Hello World, I\'m Live!');
 });
 
+// creating request to API
+let weatherHandler = (request, response) => {
+  let lat = request.query.lat;
+  let lon = request.query.lon;
+  getWeather(lat, lon)
+    .then(summaries => response.send(summaries))
+    .catch((error) => {
+      console.error(error);
+      response.status(200).send('Sorry. Something went wrong!');
+    });
+};
+
 // function to gather weather information based on client request query
-app.get('/weather', getWeather);
+app.get('/weather', weatherHandler);
 
 app.get('/movies', getMovies);
 
@@ -29,4 +41,4 @@ app.get('/*', (req, res) => {
 });
 
 // lets app to listen for the designated PORT
-app.listen(PORT, () => {console.log(`listening on PORT: ${PORT}`);});
+app.listen(PORT, () => { console.log(`listening on PORT: ${PORT}`); });
